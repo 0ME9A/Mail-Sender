@@ -1,0 +1,213 @@
+<!-- add this code into index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+        input{
+            padding: 10px;
+        }
+        th, td{
+            border: 1px solid;
+        }
+        table{
+            border-collapse: collapse;
+        }
+</style>
+</head>
+<body>
+    <!-- insert php code in php file--------------- -->
+    <form action="test.php" method="POST">
+        <label for="amount">Your current Balance.</label>
+        <br>
+        <input type="number" name="amount" id="amount" placeholder="Your balence is 340" min="0" value="340">
+        <br><br>
+        <label for="payments">Your payment.</label>
+        <br>
+        <input type="number" name="payments" id="payments" value="50" placeholder="Your payment" min="0">
+        <br><br>
+        <input type="submit" name="loan" value="loan">
+    </form>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+there is a lot of error in your code. make sure that every statement in php end with `;` you missed it in your code in a lot of places so try this, hope you'll get what are you looking for.
+
+
+
+
+
+
+
+
+<!-- begin snippet: js hide: false console: true babel: false -->
+
+<!-- language: lang-html -->
+    <!-- add this code into index.html -->
+    <!DOCTYPE html>
+    <html lang="en">
+
+    <head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Document</title>
+      <style>
+        body {
+          margin: 0;
+          padding: 0;
+          box-sizing: border-box;
+          width: 100%;
+          height: 100vh;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          flex-direction: column;
+        }
+    
+        input {
+          padding: 10px;
+        }
+        
+        th,
+        td {
+          border: 1px solid;
+        }
+        
+        table {
+          border-collapse: collapse;
+        }
+      </style>
+    </head>
+
+    <body>      
+    <form action="test.php" method="POST">
+        <label for="amount">Your current Balance.</label>
+        <br>
+        <input type="number" name="amount" id="amount" placeholder="Your balance is 340" min="0" value="340">
+        <br><br>
+        <label for="payments">Your payment.</label>
+        <br>
+        <input type="number" name="payments" id="payments" value="50" placeholder="Your payment" min="0">
+        <br><br>
+        <input type="submit" name="loan" value="loan">
+      </form>
+    </body>
+
+    </html>
+
+<!-- end snippet -->
+
+    <!-- add this code into test.php file -->
+    <style>
+    td{
+        border: 1px solid;
+        width: 300px;
+        text-align: center;
+    }
+    table{
+        border-collapse: collapse;
+        border: 1px solid;
+    }
+    </style>
+    <?php
+    function welcome(){
+        echo ("<header><h1>Welcome to your personalized Loan Calculation</h1></header>");
+    }   
+    if (isset($_POST['loan'])){
+        $amount = ($_POST['amount']);
+        $payments = ($_POST['payments']);
+    }
+    function createReport ($month, $balance){
+        print ("<table >
+            <tr>
+                <td>month</td>
+                <td>balance</td>
+            </tr>
+            <tr>
+                <td>".$month."</td>
+                <td>".$balance."</td>
+            </tr>
+        </table>");
+    }
+    function finish($amount, $balance, $month, $payments) {
+        echo "<tbody>
+            <tr>
+                <td>".$month."</td>
+                <td>".$amount."</td>
+                <td>".$balance."</td>
+                <td>".$payments."</td>
+            </tr>
+            </tbody>";
+    }
+
+
+    welcome();
+    createTable($amount, $payments);
+    function createTable ($amount, $payments){
+        // your math goes here change it as you want
+        $balance = $amount;
+        $month=0;
+        echo "Your balance history...";
+        echo "<table><thead>
+        <tr>
+            <th>month</th>
+            <th>starting balance</th>
+            <th>current balance</th>
+            <th>your payment</th>
+        </tr>
+        </thead>";
+        // if you want to run a loop and print every month like tranjection use while loop, and comment if
+        // while start here------------
+        while ($balance>$payments) {
+            $balance = $balance-$payments;
+            $month++;
+            finish($amount, $balance, $month, $payments);
+        }
+        // while end here----------------
+
+
+
+        // if you want print just last payment use 'if' and comment 'while' 
+        // if start here---------------
+        // if ($balance > $payments){
+        //     $balance = $balance-$payments;
+        //     finish($amount, $balance, $month, $payments);
+        //     echo "<br>";
+        // }
+        // if end here-------------
+        // your math end here-
+        
+        
+        echo "</table>";
+        echo "<br>your current balance.";
+        createReport($month, $balance);
+        echo "<p><strong>Devloped by me ?</strong></p>";
+
+
+    }
+
+    ?>

@@ -1,0 +1,291 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    transition: .3s;
+    text-decoration: none;
+}
+body{
+    width: 100%;
+    /* background-color: rgb(1, 28, 49); */
+    background-color: #001C25;
+
+}
+.btn-m, .btn-s{
+    padding: 10px 30px;
+    text-transform: uppercase;
+    font-weight: bold;
+    border-radius: 5px;
+    color: #00242F;
+    border-width: 1px;
+    border-color: #001C25;
+    background-color: rgb(216, 216, 216);
+}
+.btn-m{
+    padding: 15px;
+}
+button{
+    cursor: pointer;
+}
+button:hover{
+    background-color: #00242F;
+    color: rgb(216, 216, 216);
+    border-color: rgb(216, 216, 216);
+}
+header, footer, article{
+    width: 100%;
+    height: 100px;
+    padding: 25px 50px;
+    background-color: #00242F;
+}
+
+
+header{
+    position: sticky;
+    top: 0;
+    z-index: 5;
+}
+footer{
+    position: sticky;
+    bottom: 0;
+}
+
+.background-img-container{
+    width: 100%;
+    height: 30vh;
+    /* background-color: red; */
+    /* position: fixed; */
+    top: 100px;
+}
+ 
+img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.alert{
+    width: 100%;
+    /* background-color: #001C25; */
+    padding: 25px 50px;
+    position: fixed;
+    opacity: 0;
+    top: 100px;
+    z-index: 2;
+    text-transform: none;
+}
+.alert-box{
+    width: 100%;
+    max-width: 1240px;
+    padding: 25px 0px;
+    border-radius: 10px;
+    background-color: #00242F;
+    color: red;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    text-transform: capitalize;
+}
+.alert-box h2{
+    font-weight: lighter;
+}
+
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.fj-c{
+    display: flex;
+    justify-content: center;
+}
+.fja-c{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.icon-box i{
+    color: rgb(216, 216, 216);
+}
+.icon-box:hover{
+    /* background-color: white; */
+    cursor: pointer;
+}
+.add-user-btn{
+    width: 50px;
+    height: 50px;
+    background-color: #001C25;
+    border-radius: 10px;
+}
+.add-user-btn:hover{
+    background-color: #00242F;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+}
+menu i, .add-user-btn i{
+    font-size: 24px;
+}
+
+article{
+    /* min-height: 80vh; */
+    height: auto;
+    width: 100%;
+    /* background-color: aliceblue; */
+    background-color: #001C25;
+
+}
+.footer-containt-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+footer{
+    background-color: #001C25;
+
+}
+.card{
+    width: 400px;
+    /* border: 1px solid; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: #00242F;
+    box-shadow: 0 0 25px rgba(0, 0, 0, 0.1);
+}
+.card:hover{
+    transform: scale(1.05);
+}
+.card-content{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    color: grey;
+}
+.card-header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+}
+.card-user{
+    text-transform: capitalize;
+    color: white;
+}
+.card-btn{
+    align-self: flex-end;
+}
+p{
+    /* padding: 10px 0; */
+    padding: 30px 0;
+    font-weight: lighter;
+}
+.card-content a{
+    color: rgb(216, 216, 216);
+}
+.card-container{
+    /* background-color: gold; */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    max-width: 1400px;
+
+}
+.send-all{
+    width: 400px;
+    background-color: #00242F;
+    color: rgb(216, 216, 216);
+
+}
+.send-all:hover{
+    border: none;
+    background-color: rgb(216, 216, 216);
+    color: #001C25;
+}
+
+form, .form{
+    min-width: 400px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+input, textarea{
+    width: 100%;
+    border-radius: 5px;
+    padding: 15px;
+    background-color: #00242F;
+    color: white;
+    border: none;
+    text-transform: none !important;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+textarea{
+    height: 200px;
+    resize: none;
+}
+form a, .form a{
+    align-self: flex-end;
+    color: red;
+    text-decoration: underline;
+    font-size: 12px;
+}
+.brand a h1{
+    color: #437b8d;
+}
+.delete-user {
+    color: red;
+}
+
+.delete-user:hover {
+    background-color: red;
+}
+
+.btn-group {
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+
+.confirm-container{
+    backdrop-filter: blur(5px);
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    z-index: 5;
+    transform: scale(0);
+    
+}
+.confirm-action-btn-box{
+    min-width: 400px;
+    padding: 100px;
+    border-radius: 10px;
+    background-color: #00242F;
+    position: relative;
+}
+.close-alert-btn{
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+}
+.mailbot-card {
+    box-shadow: 0 !important;
+    height: 400px;
+    box-shadow: none;
+    background-color: #001C25;
+}
+
+.mailbot-box {
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+}
+
+#mailbot-img {
+    width: auto;
+    height: 100%;
+    object-fit: cover;
+}

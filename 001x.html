@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+        /* $zindex-dropdown: 1000 !default;
+      $zindex-sticky: 1020 !default;
+      $zindex-fixed: 1030 !default;
+      $zindex-modal-backdrop: 1040 !default;
+      $zindex-modal: 1050 !default;
+      $zindex-popover: 1060 !default;
+      $zindex-tooltip: 1070 !default; */
+        *{
+            margin: 0;
+            padding: 0;
+            text-decoration: none;
+            list-style: none;
+        }
+        .navbar {
+            position: relative;
+            display: inline-block;
+            overflow: auto;
+            background: #860000;
+            /* opacity: 0.6; */
+            width: 100%;
+            padding: 5px 8px;
+            z-index: 9999;
+        }
+
+        .navbar-brand {
+            color: black;
+            font-weight: bold;
+            font-size: 300%;
+        }
+
+        .navbar .navbar-brand {
+            /* float: left; */
+            display: block;
+            text-align: center;
+            overflow: auto;
+            padding: 5px 8px;
+            text-decoration: none;
+        }
+        .container-fluid{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 100px;
+        }
+        .navbar a:hover {
+            background-color: #ede2d4;
+        }
+
+        /* body {
+            margin-left: 2%;
+            margin-right: 2%;
+        } */
+        ul li{
+            width: 200px;
+            padding: 0 10px;
+        }
+        ul li a{
+            display: block;
+            width: 100%;
+        }
+        .collapse{
+            background-color: gold;
+            padding: 0;
+            margin: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top justify-content-between">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Hello</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon">icon</span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="f.html">Font</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="c.html">Command</a>
+                    </li>
+                </ul>
+                <div>
+                    <form class="form-inline">
+                        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" />
+                        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">
+                            Search
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <h1>Page</h1>
+</body>
+
+</html>
